@@ -12,6 +12,11 @@ emails.push("e5dd0965bbade1@cashbenties.com")
 emails.push("08447665bbade9@crankymonkey.info")
 console.log(emails)
 
-for (let i = 0; i < emails.lenght; i++ ){
-    console.log(emails[i])
-}
+let myButtonElement=document.querySelector(".btn");
+myButtonElement.addEventListener("click",
+    function() {
+        for (let i = 0; i < emails.lenght; i++ ){
+            console.log(emails[i])
+        }
+    }
+)   
