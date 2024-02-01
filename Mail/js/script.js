@@ -17,25 +17,36 @@ const emails = [
 
 console.log(emails)
 
-let userChoice = document.getElementById("emailRequest").value;
-        console.log(userChoice)
-       
+
 
 let myButtonElement = document.querySelector(".btn");
 myButtonElement.addEventListener("click",
     function () {
+        let userChoice = document.getElementById("emailRequest").value;
+        console.log(userChoice)
+       
         let researchElement = false;
         for(let i = 0; i < emails.length; i ++){
             if(userChoice === emails [i]){
                 researchElement = true;
                 console.log("l'email é corretta")
-            } else {
-                document.getElementById("result").innerHTML = "Non esiste nessun utente con questa email";
-            }
+            } 
         }
+
+        if (researchElement) {
+            console.log("Bentornato!");
+            document.getElementById("result").innerHTML = "Bentornato!";
+        } else {
+            console.log("Nessuna corrispondenza trovata");
+            document.getElementById("result").innerHTML = "Non esiste nessun utente con questa email";
+        }
+
+    
 
 
 
 
     }
 )   
+
+
